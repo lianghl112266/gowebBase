@@ -1,0 +1,5 @@
+{"level":"INFO","time":"2024-06-02 20:07:39","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-06-02 20:07:43","msg":"Stop Listen: 8999"}
+{"level":"ERROR","time":"2024-06-02 20:07:43","msg":"DB Init Error: dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2024-06-02 20:55:00","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-06-02 21:00:24","msg":"Stop Listen: 8999"}

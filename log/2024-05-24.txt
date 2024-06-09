@@ -1,0 +1,13 @@
+{"level":"INFO","time":"2024-05-24 12:34:52","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-05-24 12:37:58","msg":"Stop Listen: 8999"}
+{"level":"ERROR","time":"2024-05-24 12:37:58","msg":"DB Init Error: dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2024-05-24 12:37:59","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-05-24 12:38:30","msg":"Stop Listen: 8999"}
+{"level":"ERROR","time":"2024-05-24 12:38:30","msg":"DB Init Error: dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2024-05-24 12:38:31","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-05-24 12:39:00","msg":"Stop Listen: 8999"}
+{"level":"ERROR","time":"2024-05-24 12:39:00","msg":"DB Init Error: dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2024-05-24 12:44:08","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-05-24 12:46:06","msg":"Stop Listen: 8999"}
+{"level":"INFO","time":"2024-05-24 12:57:07","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-05-24 12:58:45","msg":"Stop Listen: 8999"}

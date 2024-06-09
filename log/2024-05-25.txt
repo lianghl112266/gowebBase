@@ -1,0 +1,24 @@
+{"level":"INFO","time":"2024-05-25 00:22:19","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-05-25 00:27:30","msg":"Stop Listen: 8999"}
+{"level":"ERROR","time":"2024-05-25 00:27:30","msg":"DB Init Error: dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2024-05-25 00:27:32","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-05-25 00:29:02","msg":"Stop Listen: 8999"}
+{"level":"ERROR","time":"2024-05-25 00:29:02","msg":"DB Init Error: dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2024-05-25 00:29:03","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-05-25 00:30:30","msg":"Stop Listen: 8999"}
+{"level":"ERROR","time":"2024-05-25 00:30:30","msg":"DB Init Error: dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2024-05-25 00:30:31","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-05-25 00:30:44","msg":"Stop Listen: 8999"}
+{"level":"ERROR","time":"2024-05-25 00:30:44","msg":"DB Init Error: dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2024-05-25 00:30:44","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-05-25 00:31:27","msg":"Stop Listen: 8999"}
+{"level":"ERROR","time":"2024-05-25 00:31:27","msg":"DB Init Error: dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2024-05-25 00:31:28","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-05-25 00:32:51","msg":"Stop Listen: 8999"}
+{"level":"ERROR","time":"2024-05-25 00:32:51","msg":"DB Init Error: dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2024-05-25 00:32:52","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-05-25 00:33:05","msg":"Stop Listen: 8999"}
+{"level":"ERROR","time":"2024-05-25 00:33:05","msg":"DB Init Error: dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2024-05-25 00:33:05","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-05-25 00:33:49","msg":"Stop Listen: 8999"}
+{"level":"ERROR","time":"2024-05-25 00:33:49","msg":"DB Init Error: dial tcp 127.0.0.1:3306: connect: connection refused"}

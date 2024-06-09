@@ -1,0 +1,16 @@
+{"level":"ERROR","time":"2024-06-09 13:18:34","msg":"DB Init Error: dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2024-06-09 13:19:37","msg":"Start Listen: 8080"}
+{"level":"INFO","time":"2024-06-09 13:21:42","msg":"Start Listen: 8080"}
+{"level":"ERROR","time":"2024-06-09 16:19:59","msg":"Redis Init Error: dial tcp [::1]:6379: connect: connection refused"}
+{"level":"INFO","time":"2024-06-09 16:20:35","msg":"Start Listen: 8080"}
+{"level":"INFO","time":"2024-06-09 16:22:31","msg":"Start Listen: 8080"}
+{"level":"ERROR","time":"2024-06-09 16:22:31","msg":"Start Server Error: listen tcp :8080: bind: address already in use"}
+{"level":"INFO","time":"2024-06-09 16:22:43","msg":"Start Listen: 8080"}
+{"level":"INFO","time":"2024-06-09 16:23:22","msg":"Start Listen: 8080"}
+{"level":"ERROR","time":"2024-06-09 16:23:22","msg":"Start Server Error: listen tcp :8080: bind: address already in use"}
+{"level":"INFO","time":"2024-06-09 16:23:26","msg":"Start Listen: 8080"}
+{"level":"ERROR","time":"2024-06-09 16:23:26","msg":"Start Server Error: listen tcp :8080: bind: address already in use"}
+{"level":"INFO","time":"2024-06-09 16:23:34","msg":"Start Listen: 8080"}
+{"level":"ERROR","time":"2024-06-09 16:23:34","msg":"Start Server Error: listen tcp :8080: bind: address already in use"}
+{"level":"INFO","time":"2024-06-09 16:24:04","msg":"Start Listen: 8080"}
+{"level":"INFO","time":"2024-06-09 16:25:45","msg":"Start Listen: 8080"}

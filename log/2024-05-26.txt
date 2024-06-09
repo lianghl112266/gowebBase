@@ -1,0 +1,6 @@
+{"level":"INFO","time":"2024-05-26 17:05:23","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-05-26 17:08:04","msg":"Stop Listen: 8999"}
+{"level":"ERROR","time":"2024-05-26 17:08:04","msg":"Redis Init Error: dial tcp [::1]:6379: connect: connection refused"}
+{"level":"INFO","time":"2024-05-26 17:08:54","msg":"Start Listen: 8999"}
+{"level":"INFO","time":"2024-05-26 17:14:09","msg":"Stop Listen: 8999"}
+{"level":"ERROR","time":"2024-05-26 17:14:09","msg":"Redis Init Error: dial tcp [::1]:6379: connect: connection refused"}
