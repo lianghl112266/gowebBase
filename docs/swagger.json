@@ -1,44 +1,216 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "gogoFly!",
-        "title": "go-Web",
-        "contact": {},
-        "version": "0.0.1"
+        "contact": {}
     },
     "paths": {
-        "/api/v1/public/user/login": {
+        "/api/v1/public/user/add": {
             "post": {
-                "summary": "user login",
+                "description": "API endpoint to add a new user",
+                "summary": "Add User",
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "用户名",
+                        "name": "avatar",
+                        "in": "formData"
+                    },
+                    {
+                        "type": "string",
+                        "name": "email",
+                        "in": "formData"
+                    },
+                    {
+                        "type": "integer",
+                        "name": "id",
+                        "in": "formData"
+                    },
+                    {
+                        "type": "string",
+                        "name": "mobile",
+                        "in": "formData"
+                    },
+                    {
+                        "type": "string",
                         "name": "name",
                         "in": "formData",
                         "required": true
                     },
                     {
                         "type": "string",
-                        "description": "密码",
+                        "name": "password",
+                        "in": "formData",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "name": "real_name",
+                        "in": "formData"
+                    }
+                ],
+                "responses": {
+                    "10001": {
+                        "description": "Failed to add user",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "200": {
+                        "description": "User added successfully",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/public/user/login": {
+            "post": {
+                "description": "User login API endpoint",
+                "summary": "User Login",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Username",
+                        "name": "name",
+                        "in": "formData",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Password",
                         "name": "password",
                         "in": "formData",
                         "required": true
                     }
                 ],
                 "responses": {
-                    "200": {
-                        "description": "登陆成功",
+                    "10004": {
+                        "description": "Login failed",
                         "schema": {
                             "type": "string"
                         }
                     },
-                    "401": {
-                        "description": "登陆失败",
+                    "200": {
+                        "description": "Login successful",
                         "schema": {
                             "type": "string"
                         }
                     }
+                }
+            }
+        },
+        "/api/v1/public/user/{id}": {
+            "get": {
+                "description": "Get user information by user ID",
+                "summary": "Get User by ID",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "User ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "10002": {
+                        "description": "Get user by ID failed",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "200": {
+                        "description": "User information",
+                        "schema": {
+                            "$ref": "#/definitions/model.User"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/public/users": {
+            "get": {
+                "description": "Get a list of users",
+                "summary": "Get User List",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Page number",
+                        "name": "page",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "Page size",
+                        "name": "pageSize",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "10003": {
+                        "description": "Get user list failed",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "200": {
+                        "description": "User list",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.User"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "gorm.DeletedAt": {
+            "type": "object",
+            "properties": {
+                "time": {
+                    "type": "string"
+                },
+                "valid": {
+                    "description": "Valid is true if Time is not NULL",
+                    "type": "boolean"
+                }
+            }
+        },
+        "model.User": {
+            "type": "object",
+            "properties": {
+                "avatar": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "deletedAt": {
+                    "$ref": "#/definitions/gorm.DeletedAt"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "mobile": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "realName": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
                 }
             }
         }

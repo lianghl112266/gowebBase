@@ -1,3 +1,10 @@
+/*
+Package dto defines data transfer objects (DTOs) for receiving data from web requests.
+
+DTOs are used to encapsulate data that is sent from the web client to the server.
+They provide a structured way to represent the data, making it easier to validate
+and process on the server side.
+*/
 package dto
 
 import (
@@ -9,12 +16,14 @@ import (
 //	Password string `json:"password" binding:"required" message:"密码不能为空"`
 //}
 
-type UserLoginDTO struct {
+// UserLogin represents the data structure for user login requests.
+type UserLogin struct {
 	Name     string `json:"name" binding:"required" message:"用户名填写错误" required_err:"用户名不能为空"`
 	Password string `json:"password" binding:"required" message:"密码不能为空"`
 }
 
-type UserAddDTO struct {
+// UserAdd represents the data structure for adding a new user.
+type UserAdd struct {
 	ID       uint
 	Name     string `json:"name" form:"name" binding:"required" message:"用户名不能为空"`
 	RealName string `json:"real_name" form:"real_name"`
@@ -24,15 +33,17 @@ type UserAddDTO struct {
 	Password string `json:"password" form:"password" binding:"required" message:"密码不能为空"`
 }
 
-func (this *UserAddDTO) ConvertToModule(user *model.User) {
-	user.Name = this.Name
-	user.RealName = this.RealName
-	user.Mobile = this.Mobile
-	user.Name = this.Name
-	user.Email = this.Email
-	user.Password = this.Password
+// UserList represents the data structure for retrieving a list of users.
+type UserList struct {
+	Paginate
 }
 
-type UserListDTO struct {
-	Paginate
+// ConvertToModule converts the UserAdd DTO to a User model.
+func (me *UserAdd) ConvertToModule(user *model.User) {
+	user.Name = me.Name
+	user.RealName = me.RealName
+	user.Mobile = me.Mobile
+	user.Name = me.Name
+	user.Email = me.Email
+	user.Password = me.Password
 }

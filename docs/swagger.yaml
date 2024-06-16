@@ -1,30 +1,140 @@
+definitions:
+  gorm.DeletedAt:
+    properties:
+      time:
+        type: string
+      valid:
+        description: Valid is true if Time is not NULL
+        type: boolean
+    type: object
+  model.User:
+    properties:
+      avatar:
+        type: string
+      createdAt:
+        type: string
+      deletedAt:
+        $ref: '#/definitions/gorm.DeletedAt'
+      email:
+        type: string
+      id:
+        type: integer
+      mobile:
+        type: string
+      name:
+        type: string
+      password:
+        type: string
+      realName:
+        type: string
+      updatedAt:
+        type: string
+    type: object
 info:
   contact: {}
-  description: gogoFly!
-  title: go-Web
-  version: 0.0.1
 paths:
+  /api/v1/public/user/{id}:
+    get:
+      description: Get user information by user ID
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: User information
+          schema:
+            $ref: '#/definitions/model.User'
+        "10002":
+          description: Get user by ID failed
+          schema:
+            type: string
+      summary: Get User by ID
+  /api/v1/public/user/add:
+    post:
+      description: API endpoint to add a new user
+      parameters:
+      - in: formData
+        name: avatar
+        type: string
+      - in: formData
+        name: email
+        type: string
+      - in: formData
+        name: id
+        type: integer
+      - in: formData
+        name: mobile
+        type: string
+      - in: formData
+        name: name
+        required: true
+        type: string
+      - in: formData
+        name: password
+        required: true
+        type: string
+      - in: formData
+        name: real_name
+        type: string
+      responses:
+        "200":
+          description: User added successfully
+          schema:
+            type: string
+        "10001":
+          description: Failed to add user
+          schema:
+            type: string
+      summary: Add User
   /api/v1/public/user/login:
     post:
+      description: User login API endpoint
       parameters:
-      - description: 用户名
+      - description: Username
         in: formData
         name: name
         required: true
         type: string
-      - description: 密码
+      - description: Password
         in: formData
         name: password
         required: true
         type: string
       responses:
         "200":
-          description: 登陆成功
+          description: Login successful
           schema:
             type: string
-        "401":
-          description: 登陆失败
+        "10004":
+          description: Login failed
           schema:
             type: string
-      summary: user login
+      summary: User Login
+  /api/v1/public/users:
+    get:
+      description: Get a list of users
+      parameters:
+      - description: Page number
+        in: query
+        name: page
+        type: integer
+      - description: Page size
+        in: query
+        name: pageSize
+        type: integer
+      responses:
+        "200":
+          description: User list
+          schema:
+            items:
+              $ref: '#/definitions/model.User'
+            type: array
+        "10003":
+          description: Get user list failed
+          schema:
+            type: string
+      summary: Get User List
 swagger: "2.0"
